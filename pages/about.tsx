@@ -4,7 +4,7 @@ const AboutPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Nitin Ranganath</h1>
+        <h1 className={styles.title}>Ashutosh Sahu</h1>
         <div className={styles.subtitle}>Software Engineer</div>
 
         <div className={styles.aboutContent}>
