@@ -50,6 +50,21 @@
   color: var(--accent-color);
 }
 
+.inlineIcon {
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.line:hover .inlineIcon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 @media screen and (max-width: 600px) {
   .code {
     font-size: 0.85rem;
