@@ -1,44 +1,102 @@
-.card {
-  background: var(--article-bg);
+.cardWrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.card {
+  background: var(--article-bg);
   border-radius: 12px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  height: 250px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.25s ease;
-  text-decoration: none;
-  color: inherit;
+  aspect-ratio: 16 / 10;
 }
 
 .card:hover {
   border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
+.imageContainer {
+  position: relative;
   width: 100%;
   height: 100%;
+}
+
+.projectImage {
   object-fit: cover;
-  z-index: 0;
-  opacity: 0.15;
-  transition: opacity 0.3s ease;
+  width: 100%;
+  height: 100%;
 }
 
-.card:hover .background {
-  opacity: 0.2;
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
 }
 
+.placeholderLogo {
+  opacity: 0.5;
+}
+
+.cardInfo {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.category {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  font-weight: 400;
+}
+
+.viewCodeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  width: fit-content;
+  margin-top: 0.25rem;
+}
+
+.viewCodeLink:hover {
+  color: var(--accent-color);
+}
+
+.githubIcon {
+  font-size: 1.1rem;
+}
+
+/* Legacy styles - keeping for backward compatibility if needed */
 .content {
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .logoWrapper {
@@ -57,13 +115,6 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
-}
-
-.title {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--accent-color);
 }
 
 .description {

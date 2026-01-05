@@ -2,7 +2,10 @@ export interface Project {
   title: string;
   description: string;
   logo: string;
+  image?: string;
   link: string;
+  githubLink?: string;
+  category?: string;
   slug: string;
 }
 

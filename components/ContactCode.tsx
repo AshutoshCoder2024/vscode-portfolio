@@ -13,8 +13,8 @@ const contactItems = [
   },
   {
     social: 'github',
-    link: 'itsnitinr',
-    href: 'https://github.com/itsnitinr',
+    link: 'AshutoshCoder2024',
+    href: 'https://github.com/AshutoshCoder2024',
   },
   {
     social: 'linkedin',

@@ -61,7 +61,7 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
         </div>
         <div className={styles.contributions}>
           <GitHubCalendar
-            username={process.env.NEXT_PUBLIC_GITHUB_USERNAME!}
+            username={user.login}
             hideColorLegend
             hideMonthLabels
             colorScheme="dark"
@@ -80,20 +80,74 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
 };
 
 export async function getStaticProps() {
-  const userRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`
-  );
-  const user = await userRes.json();
+  const githubUsername =
+    process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'AshutoshCoder2024';
 
-  const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=6`
-  );
-  const repos = await repoRes.json();
+  try {
+    const userRes = await fetch(
+      `https://api.github.com/users/${githubUsername}`,
+      {
+        headers: {
+          Accept: 'application/vnd.github.v3+json',
+        },
+      }
+    );
 
-  return {
-    props: { title: 'GitHub', repos, user },
-    revalidate: 600,
-  };
+    if (!userRes.ok) {
+      throw new Error(`Failed to fetch user: ${userRes.status}`);
+    }
+
+    const user = await userRes.json();
+
+    const repoRes = await fetch(
+      `https://api.github.com/users/${githubUsername}/repos?sort=pushed&per_page=6`,
+      {
+        headers: {
+          Accept: 'application/vnd.github.v3+json',
+        },
+      }
+    );
+
+    if (!repoRes.ok) {
+      throw new Error(`Failed to fetch repos: ${repoRes.status}`);
+    }
+
+    const reposData = await repoRes.json();
+
+    // Map GitHub API response to our Repo interface
+    const repos = reposData.map((repo: any) => ({
+      id: repo.id,
+      name: repo.name,
+      description: repo.description,
+      language: repo.language,
+      watchers: repo.watchers_count || 0,
+      forks: repo.forks_count || 0,
+      stargazers_count: repo.stargazers_count || 0,
+      html_url: repo.html_url,
+      homepage: repo.homepage || '',
+    }));
+
+    return {
+      props: { title: 'GitHub', repos, user },
+      revalidate: 600,
+    };
+  } catch (error) {
+    console.error('Error fetching GitHub data:', error);
+    // Return empty data on error
+    return {
+      props: {
+        title: 'GitHub',
+        repos: [],
+        user: {
+          login: githubUsername,
+          avatar_url: '',
+          public_repos: 0,
+          followers: 0,
+        },
+      },
+      revalidate: 600,
+    };
+  }
 }
 
 export default GithubPage;

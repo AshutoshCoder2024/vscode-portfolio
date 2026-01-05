@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { VscGithubAlt } from 'react-icons/vsc';
 
 import { Project } from '@/types';
 
@@ -9,27 +10,64 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  const handleCardClick = (e: React.MouseEvent) => {
+    // If clicking on the View Code link, don't trigger card click
+    if ((e.target as HTMLElement).closest('.viewCodeLink')) {
+      return;
+    }
+    window.open(project.link, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleViewCodeClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (project.githubLink) {
+      window.open(project.githubLink, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <a
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={styles.card}
-    >
-      <div className={styles.content}>
-        <div className={styles.logoWrapper}>
-          <Image
-            src={project.logo}
-            alt={`${project.title} logo`}
-            width={24}
-            height={24}
-            className={styles.logo}
-          />
-        </div>
-        <h3 className={styles.title}>{project.title}</h3>
-        <p className={styles.description}>{project.description}</p>
+    <div className={styles.cardWrapper}>
+      <div className={styles.card} onClick={handleCardClick}>
+        {project.image ? (
+          <div className={styles.imageContainer}>
+            <Image
+              src={project.image}
+              alt={`${project.title} preview`}
+              fill
+              className={styles.projectImage}
+            />
+          </div>
+        ) : (
+          <div className={styles.imagePlaceholder}>
+            <Image
+              src={project.logo}
+              alt={`${project.title} logo`}
+              width={64}
+              height={64}
+              className={styles.placeholderLogo}
+            />
+          </div>
+        )}
       </div>
-    </a>
+      <div className={styles.cardInfo}>
+        <h3 className={styles.title}>{project.title}</h3>
+        {project.category && (
+          <p className={styles.category}>{project.category}</p>
+        )}
+        {project.githubLink && (
+          <a
+            href={project.githubLink}
+            onClick={handleViewCodeClick}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.viewCodeLink} viewCodeLink`}
+          >
+            <VscGithubAlt className={styles.githubIcon} />
+            <span>View Code</span>
+          </a>
+        )}
+      </div>
+    </div>
   );
 };
 
