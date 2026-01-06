@@ -44,13 +44,13 @@ const ContactCode = () => {
       {contactItems.map((item, index) => {
         const Icon = item.icon;
         return (
-          <p className={styles.line} key={index}>
-            &nbsp;&nbsp;&nbsp;{item.social}:{' '}
-            <a href={item.href} target="_blank" rel="noopener">
-              {item.link}
-            </a>
+        <p className={styles.line} key={index}>
+          &nbsp;&nbsp;&nbsp;{item.social}:{' '}
+          <a href={item.href} target="_blank" rel="noopener">
+            {item.link}
+          </a>
             ; <Icon className={styles.inlineIcon} />
-          </p>
+        </p>
         );
       })}
       <p className={styles.line}>&#125;</p>

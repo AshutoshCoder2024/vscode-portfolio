@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { VscArrowRight } from 'react-icons/vsc';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { HiMail } from 'react-icons/hi';
 
 import styles from '@/styles/HomePage.module.css';
 
@@ -100,6 +102,52 @@ export default function HomePage() {
             I build elegant, responsive web applications with modern
             technologies. Focused on clean code and intuitive user experiences.
           </p>
+
+          <div className={styles.socialLinks}>
+            <a
+              href="https://github.com/AshutoshCoder2024"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ashutosh-kumar-sahu-5a5713331/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://twitter.com/ashutoshsa22"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="mailto:ashutoshsahu9601@gmail.com"
+              className={styles.socialIcon}
+              aria-label="Email"
+            >
+              <HiMail />
+            </a>
+            <a
+              href="https://instagram.com/ashutosh_sahu_18"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+          </div>
 
           <div className={styles.actionLinks}>
             <Link href="/projects" className={styles.primaryLink}>
