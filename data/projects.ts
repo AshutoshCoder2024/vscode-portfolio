@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description:
       'A shopping cart website built with React, Node.js, and MongoDB.',
     logo: '/logos/OneCart.png',
-    image: '/images/onecart.png',
+    image: '/images/OneCart.png',
     link: 'https://OneCart-fronted-6z39.onrender.com/',
     githubLink: 'https://github.com/AshutoshCoder2024/OneCart',
     category: 'Web development',
