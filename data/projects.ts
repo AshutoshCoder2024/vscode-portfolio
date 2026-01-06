@@ -16,7 +16,7 @@ export const projects: Project[] = [
       'A shopping cart website built with React, Node.js, and MongoDB.',
     logo: '/logos/OneCart.png',
     image: '/images/onecart.png',
-    link: 'https://onecart-fronted-6z39.onrender.com/',
+    link: 'https://OneCart-fronted-6z39.onrender.com/',
     githubLink: 'https://github.com/AshutoshCoder2024/OneCart',
     category: 'Web development',
     slug: 'driwwwle',
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     description:
       ' A Zomato clone built with JavaScript ',
     logo: '/logos/coolify.svg',
-    image: '/images/zomato.png',
+    image: '/images/Zomato.png',
     link: 'https://zomato2-lyart.vercel.app/',
     githubLink: 'https://github.com/AshutoshCoder2024/Zomato-clone',
     category: 'Web development',
