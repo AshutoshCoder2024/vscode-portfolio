@@ -52,7 +52,7 @@
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   position: relative;
-  border: 1px solid var(--explorer-border);
+  border: 1px solid #1e4869;
 }
 
 .editorContent {
@@ -94,7 +94,7 @@
   line-height: 1.5;
   color: var(--text-color);
   overflow-y: auto;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: #444 var(--main-bg);
   z-index: 2;
 }
@@ -392,6 +392,7 @@
 .codeBlock2,
 .codeBlock3,
 .codeBlock4 {
+  display: none;
   position: absolute;
   font-family: 'JetBrains Mono', monospace;
   color: rgba(var(--accent-color-rgb), 0.08);
@@ -480,6 +481,7 @@
 .codeSymbol1,
 .codeSymbol2,
 .codeSymbol3 {
+  display: none;
   position: absolute;
   font-family: 'JetBrains Mono', monospace;
   color: rgba(255, 255, 255, 0.08);
@@ -517,6 +519,7 @@
 }
 
 .dotPattern {
+  display: none;
   position: absolute;
   top: 10%;
   right: 30%;

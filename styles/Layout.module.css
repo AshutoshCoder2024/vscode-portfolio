@@ -4,6 +4,12 @@
   display: flex;
   background: var(--main-bg);
   overflow-x: hidden;
+  position: relative;
+}
+
+.mainContent {
+  width: 100%;
+  /* border-left: 1px solid var(--explorer-border); */
 }
 
 .content {

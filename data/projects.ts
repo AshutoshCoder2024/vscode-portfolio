@@ -19,7 +19,7 @@ export const projects: Project[] = [
     link: 'https://OneCart-fronted-6z39.onrender.com/',
     githubLink: 'https://github.com/AshutoshCoder2024/OneCart',
     category: 'Web development',
-    slug: 'driwwwle',
+    slug: 'OneCart',
   },
   {
     title: 'VSCode Portfolio',
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     link: 'https://my-playlist2.netlify.app/',
     githubLink: 'https://github.com/AshutoshCoder2024/My-music',
     category: 'Web development',
-    slug: 'subtrackt',
+    slug: 'My-Music',
   },
   {
     title: 'Sarthi-ai',
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     link: 'https://sarthi-ai.netlify.app/',
     githubLink: 'https://github.com/AshutoshCoder2024/Sarthi-ai',
     category: 'VSCode Extension',
-    slug: 'coolify-vscode-extension',
+    slug: 'Sarthi-ai',
   },
   {
     title: 'Swiggy-clone',
@@ -63,7 +63,18 @@ export const projects: Project[] = [
     link: 'https://swiggy-colne.netlify.app/',
     githubLink: 'https://github.com/AshutoshCoder2024/swiggy-clone',
     category: 'Web development',
-    slug: 'coolify-vscode-extension',
+    slug: 'Swiggy-clone',
+  },
+  {
+    title: 'Techfest',
+    description:
+      ' A AI chatbot built with HTML CSS AND JS ',
+    logo: '/logos/coolify.svg',
+    image: '/images/Techfest.png',
+    link: 'https://innoverse-tech-fest.netlify.app/',
+    githubLink: 'https://github.com/AshutoshCoder2024/XT-TECH-FEST-2025',
+    category: 'Web development',
+    slug: 'Techfest',
   },
   {
     title: 'Recruitment-form',
@@ -85,7 +96,7 @@ export const projects: Project[] = [
     link: 'https://adarsh-academy.vercel.app/',
     githubLink: 'https://github.com/AshutoshCoder2024/Adarsh-Academy',
     category: 'Web development',
-    slug: 'coolify-vscode-extension',
+    slug: 'Adarsh-Academy',
   },
   {
     title: 'Zomato-clone',
@@ -96,18 +107,8 @@ export const projects: Project[] = [
     link: 'https://zomato2-lyart.vercel.app/',
     githubLink: 'https://github.com/AshutoshCoder2024/Zomato-clone',
     category: 'Web development',
-    slug: 'coolify-vscode-extension',
+    slug: 'Zomato-clone',
   },
 
-  {
-    title: 'Recruitment-form',
-    description:
-      ' A AI chatbot built with HTML CSS AND JS ',
-    logo: '/logos/coolify.svg',
-    image: '/images/Techfest.png',
-    link: 'https://innoverse-tech-fest.netlify.app/',
-    githubLink: 'https://github.com/AshutoshCoder2024/XT-TECH-FEST-2025',
-    category: 'Web development',
-    slug: 'coolify-vscode-extension',
-  },
+ 
 ];

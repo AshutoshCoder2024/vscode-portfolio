@@ -35,6 +35,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               alt={`${project.title} preview`}
               fill
               className={styles.projectImage}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         ) : (
@@ -45,6 +47,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               width={64}
               height={64}
               className={styles.placeholderLogo}
+              loading="lazy"
             />
           </div>
         )}

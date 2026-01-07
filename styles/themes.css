@@ -61,7 +61,7 @@
   --sidebar-hover-bg: #00010a;
   --explorer-bg: #0a0e14;
   --explorer-hover-bg: #00010a;
-  --explorer-border: transparent;
+  --explorer-border: rgba(255, 255, 255, 0.18);
   --tabs-bg: #0a0e14;
   --tab-bg: #0a0e14;
   --tab-active-bg: #0a0e14;
@@ -87,7 +87,7 @@
   --sidebar-hover-bg: #191e2a;
   --explorer-bg: #1f2430;
   --explorer-hover-bg: #191e2a;
-  --explorer-border: transparent;
+  --explorer-border: rgba(255, 255, 255, 0.18);
   --tabs-bg: #1f2430;
   --tab-bg: #1f2430;
   --tab-active-bg: #1f2430;
@@ -139,7 +139,7 @@
   --sidebar-hover-bg: #0e293f;
   --explorer-bg: #011627;
   --explorer-hover-bg: #0e293f;
-  --explorer-border: transparent;
+  --explorer-border: rgba(255, 255, 255, 0.18);
   --tabs-bg: #011627;
   --tab-bg: #01111d;
   --tab-active-bg: #0b2942;

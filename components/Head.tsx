@@ -2,34 +2,49 @@ import Head from 'next/head';
 
 interface CustomHeadProps {
   title: string;
+  description?: string;
 }
 
-const CustomHead = ({ title }: CustomHeadProps) => {
+const CustomHead = ({ title, description }: CustomHeadProps) => {
+  const defaultDescription =
+    "Ashutosh Sahu - Full Stack Web Developer. Building elegant, responsive web applications with modern technologies. Specialized in React, Next.js, Node.js, and MongoDB.";
+  const metaDescription = description || defaultDescription;
+  const siteUrl = 'https://aashutosh-dev.vercel.app';
+
   return (
     <Head>
       <title>{title}</title>
-      <meta
-        name="description"
-        content="Ashutosh Sahu is an avid full stack web developer building websites and applications you'd love to use"
-      />
+      <meta name="description" content={metaDescription} />
       <meta
         name="keywords"
-        content="ashutosh sahu, ashutosh, sahu, web developer portfolio, ashutosh web developer, ashutosh developer, mern stack, ashutosh sahu portfolio, vscode-portfolio"
+        content="ashutosh sahu, full stack developer, web developer, react developer, next.js developer, mern stack, portfolio, ashutosh sahu portfolio, vscode-portfolio, javascript developer, typescript developer"
       />
-      <meta property="og:title" content="Ashutosh Sahu's Portfolio" />
-      <meta
-        property="og:description"
-        content="A full-stack developer building websites that you'd like to use."
-      />
-      <meta property="og:image" content="https://imgur.com/4zi5KkQ.png" />
-      <meta property="og:url" content="https://vscode-portfolio.vercel.app" />
+      <meta name="author" content="Ashutosh Sahu" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="canonical" href={siteUrl} />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={siteUrl} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={`${siteUrl}/images/vscode-portfolio.png`} />
+      <meta property="og:site_name" content="Ashutosh Sahu Portfolio" />
+
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={siteUrl} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={`${siteUrl}/images/vscode-portfolio.png`} />
+
+      {/* Additional SEO */}
+      <meta name="theme-color" content="#007ACC" />
+      <meta name="robots" content="index, follow" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
     </Head>
   );
 };
 
 export default CustomHead;
-
-CustomHead.defaultProps = {
-  title: 'Ashutosh Sahu',
-};

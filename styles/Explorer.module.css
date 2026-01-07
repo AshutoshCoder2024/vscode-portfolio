@@ -3,24 +3,24 @@
   width: 18vw;
   color: rgb(225, 228, 232);
   font-family: 'Source Sans Pro', sans-serif;
-  border-right: 1px solid var(--explorer-border);
+  border-right: 1px solid #1e4869;
 }
 
 .title {
   padding: 0.5rem 0.75rem;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   margin-bottom: 0;
   position: relative;
-  border-bottom: 1px solid var(--explorer-border);
+
 }
 
 .heading {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.5px;
   display: flex;
   align-items: center;
@@ -44,11 +44,25 @@
   padding: 0.25rem 1rem;
   display: flex;
   align-items: center;
-  font-size: 0.7rem;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   position: relative;
   font-weight: 400;
+}
+
+.projectFile {
+  padding: 0.15rem 1.25rem 0.15rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.projectFile span {
+  font-size: 0.8rem;
+  opacity: 0.8;
 }
 
 .file:hover {

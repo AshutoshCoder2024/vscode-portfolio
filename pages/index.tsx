@@ -10,16 +10,14 @@ export default function HomePage() {
   const [activeLineIndex, setActiveLineIndex] = useState(0);
 
   const codeLines = [
-    { code: 'const HomePage = () => {', type: 'function' },
-    {
-      code: '  const [isLoaded, setIsLoaded] = useState(true);',
-      type: 'variable',
-    },
-    { code: '  const developerInfo = {', type: 'variable' },
+    { code: 'function HomePage() {', type: 'function' },
+    { code: '  const [developerInfo, setDeveloperInfo] = useState({', type: 'variable' },
     { code: "    name: 'Ashutosh Sahu',", type: 'array-item' },
     { code: "    role: 'Full Stack Developer',", type: 'array-item' },
-    { code: "    bio: 'Building modern web experiences'", type: 'array-item' },
-    { code: '  };', type: 'array-end' },
+    { code: "    skills: ['React', 'Next.js', 'TypeScript', 'Node.js']", type: 'array-item' },
+    { code: '  });', type: 'array-end' },
+    { code: '', type: 'blank' },
+    { code: '  const [isLoaded, setIsLoaded] = useState(false);', type: 'variable' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
     {
@@ -41,9 +39,7 @@ export default function HomePage() {
     { code: '      </div>', type: 'object-method' },
     { code: '    </main>', type: 'object-method' },
     { code: '  );', type: 'close' },
-    { code: '};', type: 'close-function' },
-    { code: '', type: 'blank' },
-    { code: 'export default HomePage;', type: 'function-call' },
+    { code: '}', type: 'close-function' },
   ];
 
   useEffect(() => {
@@ -52,7 +48,7 @@ export default function HomePage() {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [codeLines.length]);
+  }, []);
 
   return (
     <div className={styles.heroLayout}>
