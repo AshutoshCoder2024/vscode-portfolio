@@ -6,6 +6,7 @@ import Sidebar from '@/components/Sidebar';
 import Explorer from '@/components/Explorer';
 import Bottombar from '@/components/Bottombar';
 import Tabsbar from '@/components/Tabsbar';
+import ChatBotFab from '@/components/ChatBotFab';
 
 import styles from '@/styles/Layout.module.css';
 
@@ -37,6 +38,7 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
       </div>
       <Bottombar />
+      <ChatBotFab />
     </>
   );
 };
