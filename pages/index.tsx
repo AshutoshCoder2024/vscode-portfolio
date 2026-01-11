@@ -9,38 +9,7 @@ import styles from '@/styles/HomePage.module.css';
 export default function HomePage() {
   const [activeLineIndex, setActiveLineIndex] = useState(0);
 
-  const codeLines = [
-    { code: 'function HomePage() {', type: 'function' },
-    { code: '  const [developerInfo, setDeveloperInfo] = useState({', type: 'variable' },
-    { code: "    name: 'Ashutosh Sahu',", type: 'array-item' },
-    { code: "    role: 'Full Stack Developer',", type: 'array-item' },
-    { code: "    skills: ['React', 'Next.js', 'TypeScript', 'Node.js']", type: 'array-item' },
-    { code: '  });', type: 'array-end' },
-    { code: '', type: 'blank' },
-    { code: '  const [isLoaded, setIsLoaded] = useState(false);', type: 'variable' },
-    { code: '', type: 'blank' },
-    { code: '  useEffect(() => {', type: 'nested-function' },
-    {
-      code: '    document.title = `${developerInfo.name} | Portfolio`;',
-      type: 'return',
-    },
-    { code: '    setIsLoaded(true);', type: 'function-call' },
-    { code: '  }, []);', type: 'close' },
-    { code: '', type: 'blank' },
-    { code: '  return (', type: 'return-object' },
-    { code: '    <main className="hero-container">', type: 'object-method' },
-    { code: '      <h1>{developerInfo.name}</h1>', type: 'object-method' },
-    { code: '      <p>{developerInfo.role}</p>', type: 'object-method' },
-    { code: '      <div className="cta">', type: 'object-method' },
-    {
-      code: '        <Link href="/projects">View Projects</Link>',
-      type: 'object-method',
-    },
-    { code: '      </div>', type: 'object-method' },
-    { code: '    </main>', type: 'object-method' },
-    { code: '  );', type: 'close' },
-    { code: '}', type: 'close-function' },
-  ];
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
