@@ -38,12 +38,7 @@
   margin-bottom: 0;
 }
 
-.sectionTitle {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--accent-color);
-}
+
 
 .paragraph {
   margin-bottom: 1.25rem;
