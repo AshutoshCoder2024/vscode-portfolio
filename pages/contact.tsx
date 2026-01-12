@@ -25,7 +25,13 @@ const ContactPage = () => {
     e.preventDefault();
     
     // Validation
-    
+    if (!formData.name.trim()) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please enter your name',
+      });
+      return;
+    }
 
     if (!validateEmail(formData.email)) {
       setSubmitStatus({
