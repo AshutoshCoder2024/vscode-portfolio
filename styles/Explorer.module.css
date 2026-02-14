@@ -85,7 +85,17 @@
 
 @media screen and (max-width: 900px) {
   .explorer {
-    width: 20vw;
+    width: 22vw;
+    min-width: 0;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .heading {
+    font-size: 0.85rem;
+  }
+  .file {
+    font-size: 0.9rem;
   }
 }
 

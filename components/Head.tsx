@@ -20,7 +20,7 @@ const CustomHead = ({ title, description }: CustomHeadProps) => {
         content="ashutosh sahu, full stack developer, web developer, react developer, next.js developer, mern stack, portfolio, ashutosh sahu portfolio, vscode-portfolio, javascript developer, typescript developer"
       />
       <meta name="author" content="Ashutosh Sahu" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       <link rel="canonical" href={siteUrl} />
 
       {/* Open Graph / Facebook */}

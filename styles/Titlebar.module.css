@@ -64,3 +64,25 @@
     flex: 4;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .titlebar {
+    height: 28px;
+    font-size: 0.75rem;
+    padding: 0 0.35rem;
+  }
+  .title {
+    font-size: 0.8rem;
+  }
+  .windowButtons * {
+    height: 11px;
+    width: 11px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .titlebar {
+    height: 26px;
+    font-size: 0.7rem;
+  }
+}

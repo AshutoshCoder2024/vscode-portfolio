@@ -61,6 +61,18 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2.5rem 1.25rem;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .aboutContent {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .container {
     padding: 2rem 1rem;
@@ -83,5 +95,24 @@
   .paragraph {
     font-size: 0.95rem;
     line-height: 1.65;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    padding: 1.5rem 0.75rem;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+  .paragraph {
+    font-size: 0.9rem;
   }
 }

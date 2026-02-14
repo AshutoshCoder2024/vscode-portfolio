@@ -5,11 +5,17 @@
   background: var(--main-bg);
   overflow-x: hidden;
   position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
 }
 
 .mainContent {
   width: 100%;
-  /* border-left: 1px solid var(--explorer-border); */
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .content {
@@ -17,12 +23,14 @@
   color: var(--text-color);
   font-family: 'JetBrains Mono', monospace;
   flex: 1;
-  height: 85vh;
+  min-height: 85vh;
+  min-height: 85dvh;
   overflow-y: auto;
   scroll-behavior: smooth;
   overflow-x: hidden;
   display: flex;
   align-items: center;
+  -webkit-overflow-scrolling: touch;
 }
 
 .content {
@@ -44,8 +52,34 @@
   border-left: 1px solid #1e1f29;
 }
 
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .content {
+    padding: 1.5rem 1.25rem;
+    min-height: 80vh;
+    min-height: 80dvh;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 1.25rem 1rem;
+    min-height: 75vh;
+    min-height: 75dvh;
+    align-items: flex-start;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .content {
-    padding: 2rem 1rem;
+    padding: 1rem 0.75rem;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 380px) {
+  .content {
+    padding: 0.75rem 0.5rem;
   }
 }
