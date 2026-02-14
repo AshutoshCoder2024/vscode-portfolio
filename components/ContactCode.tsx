@@ -5,8 +5,8 @@ import styles from '@/styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'aashutosh-dev.vercel.app',
-    href: 'https://aashutosh-dev.vercel.app/',
+    link: 'ashutoshdev.in',
+    href: 'https://ashutoshdev.in/',
     icon: FaGlobe,
   },
   {
@@ -23,7 +23,7 @@ const contactItems = [
   },
   {
     social: 'linkedin',
-    link: 'ashutosh-kumar-sahu',
+    link: 'Ashutosh kumar sahu',
     href: 'https://www.linkedin.com/in/ashutosh-kumar-sahu-5a5713331/',
     icon: FaLinkedin,
   },
