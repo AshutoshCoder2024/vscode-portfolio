@@ -5,12 +5,17 @@
   justify-content: space-between;
   width: 4.5vw;
   min-width: 40px;
-  height: calc(100vh - 30px - 25px);
+  min-height: calc(100vh - 30px - 25px);
+  min-height: calc(100dvh - 30px - 25px);
 }
 
 .iconContainer {
   cursor: pointer;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
 }
 
 .iconContainer:hover {
@@ -54,8 +59,11 @@
 
 @media screen and (max-width: 600px) {
   .sidebar {
-    width: 12vw;
-    min-width: 44px;
+    width: 56px;
+    min-width: 56px;
+  }
+  .iconContainer {
+    min-height: 48px;
   }
   .icon {
     height: 44px;
@@ -68,8 +76,11 @@
 
 @media screen and (max-width: 380px) {
   .sidebar {
-    width: 14vw;
-    min-width: 40px;
+    width: 52px;
+    min-width: 52px;
+  }
+  .iconContainer {
+    min-height: 44px;
   }
   .icon {
     height: 40px;

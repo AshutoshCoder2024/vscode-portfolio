@@ -7,6 +7,13 @@
   min-width: 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  padding-left: env(safe-area-inset-left, 0);
+}
+
+@media screen and (max-width: 600px) {
+  .tabs {
+    padding-right: 0.25rem;
+  }
 }
 
 @media screen and (max-width: 900px) {

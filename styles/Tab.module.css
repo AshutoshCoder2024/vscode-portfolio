@@ -28,12 +28,12 @@
 
 @media screen and (max-width: 600px) {
   .tab {
-    padding: 0.45rem 0.9rem;
-    font-size: 0.8rem;
-    min-height: 40px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    min-height: 44px;
   }
   .tab p {
-    max-width: 90px;
+    max-width: 100px;
   }
 }
 

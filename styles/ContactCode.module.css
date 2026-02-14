@@ -1,13 +1,15 @@
 .code {
   counter-reset: line;
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
   background-color: var(--article-bg);
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
+  width: 100%;
+  min-width: 0;
 }
 
 .code::before {
@@ -40,10 +42,20 @@
 .code a {
   color: var(--accent-color);
   text-decoration: none;
+  word-break: break-all;
+  padding: 0.15em 0;
+  display: inline-block;
+  min-height: 1.5em;
 }
 
 .code a:hover {
   text-decoration: underline;
+}
+
+.code a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .className {
@@ -119,11 +131,26 @@
   letter-spacing: 0.5px;
 }
 
+@media screen and (max-width: 768px) {
+  .code {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    padding: 1.25rem 1.25rem;
+    border-radius: 8px;
+  }
+  .line {
+    padding-left: 2.25rem;
+  }
+  .line::before {
+    font-size: 0.8rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .code {
-    font-size: 0.85rem;
-    line-height: 1.5rem;
-    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.65rem;
+    padding: 1.15rem 1rem;
   }
 
   .line {
@@ -131,7 +158,15 @@
   }
 
   .line::before {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+  }
+
+  .code a {
+    word-break: break-all;
+  }
+
+  .inlineIcon {
+    font-size: 1rem;
   }
 
   .socialIconsGrid {
@@ -141,6 +176,7 @@
 
   .socialIconCard {
     padding: 1rem 0.75rem;
+    min-height: 44px;
   }
 
   .socialIcon {
@@ -149,5 +185,23 @@
 
   .socialLabel {
     font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .code {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding: 1rem 0.85rem;
+  }
+  .line {
+    padding-left: 1.75rem;
+  }
+  .line::before {
+    font-size: 0.7rem;
+  }
+  .inlineIcon {
+    font-size: 0.9rem;
+    margin-left: 0.35rem;
   }
 }

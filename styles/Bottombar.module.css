@@ -1,9 +1,10 @@
 .bottomBar {
   background: var(--bottombar-bg);
-  height: 25px;
+  min-height: 25px;
+  padding: 0 0.5rem;
+  padding-bottom: max(0.25rem, env(safe-area-inset-bottom, 0px));
   border-top: 1px solid var(--bottombar-border);
   color: rgb(225, 228, 232);
-  padding: 0 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,9 +28,10 @@
 .section {
   display: flex;
   margin-right: 0.5rem;
+  min-height: 28px;
   height: 24px;
   align-items: center;
-  padding: 0 0.2rem;
+  padding: 0 0.35rem;
   cursor: pointer;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -54,10 +56,15 @@
   .bottomBar {
     font-size: 0.65rem;
     padding: 0 0.35rem;
-    height: 22px;
+    min-height: 28px;
+    height: auto;
+    padding-top: 4px;
+    padding-bottom: calc(4px + env(safe-area-inset-bottom, 0px));
   }
   .section {
     margin-right: 0.35rem;
+    min-height: 32px;
+    padding: 0 0.4rem;
   }
 }
 

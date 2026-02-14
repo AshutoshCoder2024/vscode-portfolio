@@ -55,8 +55,9 @@
 
 @media screen and (max-width: 600px) {
   .layout {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom, 0px));
   }
   .container {
     margin: 1rem 0;
