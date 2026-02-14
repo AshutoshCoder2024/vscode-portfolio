@@ -111,6 +111,7 @@ const ContactPage = () => {
                   onChange={handleChange}
                   required
                   className={styles.input}
+                  aria-label="Your full name"
                 />
               </div>
               <div className={styles.inputWrapper}>
@@ -123,6 +124,7 @@ const ContactPage = () => {
                   onChange={handleChange}
                   required
                   className={styles.input}
+                  aria-label="Your email address"
                 />
               </div>
               <div className={styles.inputWrapper}>
@@ -141,6 +143,8 @@ const ContactPage = () => {
                 type="submit"
                 className={styles.submitButton}
                 disabled={isSubmitting}
+                aria-busy={isSubmitting}
+                aria-live="polite"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>

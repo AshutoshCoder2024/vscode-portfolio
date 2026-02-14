@@ -24,13 +24,18 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
+      <a href="#main-editor" className={styles.skipLink}>
+        Skip to main content
+      </a>
       <Titlebar />
       <div className={styles.main}>
-        <Sidebar />
-        <Explorer />
+        <aside className={styles.leftSidebar} aria-label="Navigation and explorer">
+          <Sidebar />
+          <Explorer />
+        </aside>
         <div className={styles.mainContent}>
           <Tabsbar />
-          <main id="main-editor" className={styles.content}>
+          <main id="main-editor" className={styles.content} role="main" tabIndex={-1}>
             {children}
           </main>
         </div>

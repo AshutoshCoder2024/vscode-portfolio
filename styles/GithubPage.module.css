@@ -3,6 +3,8 @@
   margin: 0 auto;
   height: 100%;
   width: 100%;
+  padding: 0 1.5rem;
+  padding-bottom: max(2rem, env(safe-area-inset-bottom, 0px));
 }
 
 .pageHeading {
@@ -10,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .githubPage {
@@ -298,26 +300,38 @@
 }
 
 @media screen and (max-width: 768px) {
+  .layout {
+    padding: 0 1rem;
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom, 0px));
+  }
+  .pageHeading {
+    padding-top: 1.5rem;
+  }
+  .profileSection {
+    padding: 1.5rem 1rem;
+  }
   .profileInfo {
     flex-direction: column;
     align-items: center;
+    padding: 0 1rem;
   }
-
   .pageTitle {
     font-size: 1.75rem;
   }
-
   .pageSubtitle {
     font-size: 1rem;
     margin-bottom: 2rem;
+    padding: 0 0.5rem;
   }
-
   .userInfo {
     width: 100%;
   }
-
   .reposContainer {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .contributions {
+    padding: 1rem;
   }
 }
 
@@ -328,31 +342,44 @@
 }
 
 @media screen and (max-width: 600px) {
+  .layout {
+    padding: 0 0.75rem;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+  }
+  .pageHeading {
+    padding-top: 1.25rem;
+  }
+  .profileSection {
+    padding: 1.25rem 0.75rem;
+    margin-bottom: 1.5rem;
+  }
   .avatar {
     width: 80px;
     height: 80px;
   }
-
   .username {
     font-size: 1.4rem;
   }
-
   .username::before {
     font-size: 1.4rem;
   }
-
   .sectionIcon {
     font-size: 1.1rem;
     padding: 0.4rem;
   }
-
   .sectionTitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
-
   .stats {
     flex-direction: column;
     gap: 0.75rem;
+  }
+  .loadingContainer,
+  .errorContainer {
+    padding: 2rem 1rem;
+  }
+  .errorList {
+    padding-left: 1.25rem;
   }
 }
 

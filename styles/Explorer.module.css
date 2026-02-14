@@ -1,9 +1,15 @@
 .explorer {
   background: var(--explorer-bg);
   width: 18vw;
+  min-width: 0;
+  flex: 1;
   color: rgb(225, 228, 232);
   font-family: 'Source Sans Pro', sans-serif;
   border-right: 1px solid #1e4869;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
 }
 
 .title {
@@ -13,8 +19,7 @@
   font-size: 1.2rem;
   letter-spacing: 1px;
   margin-bottom: 0;
-  position: relative;
-
+  flex-shrink: 0;
 }
 
 .heading {
@@ -27,12 +32,20 @@
   cursor: pointer;
   padding: 0.4rem 0.5rem;
   color: rgba(255, 255, 255, 0.9);
+  flex-shrink: 0;
 }
 
 .checkbox {
   position: absolute;
   opacity: 0;
   z-index: -1;
+}
+
+.explorerScroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .files {

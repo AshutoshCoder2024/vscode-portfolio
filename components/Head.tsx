@@ -15,6 +15,9 @@ const CustomHead = ({ title, description }: CustomHeadProps) => {
     <Head>
       <title>{title}</title>
       <meta name="description" content={metaDescription} />
+      <meta name="theme-color" content="#24292e" media="(prefers-color-scheme: dark)" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <meta
         name="keywords"
         content="ashutosh sahu, full stack developer, web developer, react developer, next.js developer, mern stack, portfolio, ashutosh sahu portfolio, vscode-portfolio, javascript developer, typescript developer"
@@ -39,7 +42,6 @@ const CustomHead = ({ title, description }: CustomHeadProps) => {
       <meta name="twitter:image" content={`${siteUrl}/images/vscode-portfolio.png`} />
 
       {/* Additional SEO */}
-      <meta name="theme-color" content="#007ACC" />
       <meta name="robots" content="index, follow" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />

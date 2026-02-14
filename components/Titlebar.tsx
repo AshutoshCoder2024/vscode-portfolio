@@ -4,7 +4,7 @@ import styles from '@/styles/Titlebar.module.css';
 
 const Titlebar = () => {
   return (
-    <section className={styles.titlebar}>
+    <section className={styles.titlebar} aria-label="Window title bar">
       <Image
         src="/logos/vscode_icon.svg"
         alt="VSCode Icon"

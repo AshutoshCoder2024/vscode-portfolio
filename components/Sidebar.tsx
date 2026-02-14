@@ -26,45 +26,54 @@ const sidebarBottomItems = [
 const Sidebar = () => {
   const router = useRouter();
 
+  const navLabel = 'Main navigation';
   return (
-    <aside className={styles.sidebar}>
-      <div className={styles.sidebarTop}>
+    <aside className={styles.sidebar} aria-label={navLabel}>
+      <nav className={styles.sidebarTop} aria-label={navLabel}>
         {sidebarTopItems.map(({ Icon, path }) => (
-          <Link href={path} key={path}>
-            <div
-              className={`${styles.iconContainer} ${
-                router.pathname === path && styles.active
-              }`}
-            >
-              <Icon
-                size={16}
-                fill={
-                  router.pathname === path
-                    ? 'rgb(225, 228, 232)'
-                    : 'rgb(106, 115, 125)'
-                }
-                className={styles.icon}
-              />
-            </div>
+          <Link
+            href={path}
+            key={path}
+            className={`${styles.iconContainer} ${
+              router.pathname === path ? styles.active : ''
+            }`}
+            aria-label={path === '/' ? 'Home' : path.slice(1).replace(/\//g, ' ')}
+          >
+            <Icon
+              size={16}
+              fill={
+                router.pathname === path
+                  ? 'rgb(225, 228, 232)'
+                  : 'rgb(106, 115, 125)'
+              }
+              className={styles.icon}
+              aria-hidden
+            />
           </Link>
         ))}
-      </div>
-      <div className={styles.sidebarBottom}>
+      </nav>
+      <nav className={styles.sidebarBottom} aria-label="Secondary navigation">
         {sidebarBottomItems.map(({ Icon, path }) => (
-          <div className={styles.iconContainer} key={path}>
-            <Link href={path}>
-              <Icon
-                fill={
-                  router.pathname === path
-                    ? 'rgb(225, 228, 232)'
-                    : 'rgb(106, 115, 125)'
-                }
-                className={styles.icon}
-              />
-            </Link>
-          </div>
+          <Link
+            href={path}
+            key={path}
+            className={`${styles.iconContainer} ${
+              router.pathname === path ? styles.active : ''
+            }`}
+            aria-label={path === '/about' ? 'About' : 'Settings'}
+          >
+            <Icon
+              fill={
+                router.pathname === path
+                  ? 'rgb(225, 228, 232)'
+                  : 'rgb(106, 115, 125)'
+              }
+              className={styles.icon}
+              aria-hidden
+            />
+          </Link>
         ))}
-      </div>
+      </nav>
     </aside>
   );
 };

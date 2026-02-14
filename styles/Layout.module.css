@@ -1,21 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap');
 
+.skipLink {
+  position: absolute;
+  top: -100px;
+  left: 0.5rem;
+  z-index: 9999;
+  padding: 0.75rem 1rem;
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: top 0.2s ease;
+}
+
+.skipLink:focus {
+  top: 0.5rem;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 .main {
   display: flex;
   background: var(--main-bg);
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: calc(100vh - 30px - 25px);
+  height: calc(100dvh - 30px - 25px);
   width: 100%;
 }
 
+/* Left sidebar: fixed, never scrolls (logo + Explore Projects) */
+.leftSidebar {
+  display: flex;
+  flex-shrink: 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
 .mainContent {
-  width: 100%;
-  min-width: 0;
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 .content {
@@ -24,11 +54,10 @@
   color: var(--text-color);
   font-family: 'JetBrains Mono', monospace;
   flex: 1;
-  min-height: 85vh;
-  min-height: 85dvh;
+  min-height: 0;
   overflow-y: auto;
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   display: flex;
   align-items: center;
   -webkit-overflow-scrolling: touch;
@@ -91,5 +120,20 @@
   .content {
     padding: 0.75rem 0.5rem;
     padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Mobile: left sidebar stays fixed (Sidebar only when Explorer is hidden) */
+@media screen and (max-width: 600px) {
+  .main {
+    height: calc(100vh - 28px - 28px);
+    height: calc(100dvh - 28px - 28px);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .main {
+    height: calc(100vh - 26px - 26px);
+    height: calc(100dvh - 26px - 26px);
   }
 }

@@ -5,6 +5,10 @@ import styles from '@/styles/SettingsPage.module.css';
 const SettingsPage = () => {
   return (
     <div className={styles.layout}>
+      <h1 className={styles.pageTitle}>Settings</h1>
+      <p className={styles.pageSubtitle}>
+        Choose a theme for your portfolio experience.
+      </p>
       <div className={styles.container}>
         <ThemeInfo
           name="GitHub Dark"

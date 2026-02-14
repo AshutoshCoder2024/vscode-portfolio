@@ -39,15 +39,18 @@ const Explorer = () => {
   const [projectsOpen, setProjectsOpen] = useState(true);
 
   return (
-    <div className={styles.explorer}>
-      <p className={styles.title}>Explorer</p>
-      <div>
+    <nav className={styles.explorer} aria-label="File explorer">
+      <p className={styles.title} id="explorer-title">Explorer</p>
+      <div className={styles.explorerScroll}>
+      <div role="group" aria-labelledby="explorer-title">
         <input
           type="checkbox"
           className={styles.checkbox}
           id="portfolio-checkbox"
           checked={portfolioOpen}
           onChange={() => setPortfolioOpen(!portfolioOpen)}
+          aria-expanded={portfolioOpen}
+          aria-controls="portfolio-files"
         />
         <label htmlFor="portfolio-checkbox" className={styles.heading}>
           <VscChevronRight
@@ -57,8 +60,10 @@ const Explorer = () => {
           Portfolio
         </label>
         <div
+          id="portfolio-files"
           className={styles.files}
           style={portfolioOpen ? { display: 'block' } : { display: 'none' }}
+          role="list"
         >
           {explorerItems.map((item) => (
             <Link href={item.path} key={item.name}>
@@ -78,6 +83,8 @@ const Explorer = () => {
           id="projects-checkbox"
           checked={projectsOpen}
           onChange={() => setProjectsOpen(!projectsOpen)}
+          aria-expanded={projectsOpen}
+          aria-controls="projects-files"
         />
         <label htmlFor="projects-checkbox" className={styles.heading}>
           <VscChevronRight
@@ -87,8 +94,10 @@ const Explorer = () => {
           Projects
         </label>
         <div
+          id="projects-files"
           className={styles.files}
           style={projectsOpen ? { display: 'block' } : { display: 'none' }}
+          role="list"
         >
           {projects.map((project) => (
             <Link href={`/projects/${project.slug}`} key={project.slug}>
@@ -100,7 +109,8 @@ const Explorer = () => {
           ))}
         </div>
       </div>
-    </div>
+      </div>
+    </nav>
   );
 };
 

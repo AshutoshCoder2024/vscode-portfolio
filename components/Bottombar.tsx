@@ -18,6 +18,7 @@ const Bottombar = () => {
           target="_blank"
           rel="noreferrer noopener"
           className={styles.section}
+          aria-label="View source code on GitHub"
         >
           <VscSourceControl className={styles.icon} />
           <p>main</p>
