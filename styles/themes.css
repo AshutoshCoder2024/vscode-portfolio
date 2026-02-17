@@ -1,5 +1,33 @@
-/* GitHub Dark */
+/* Default: Night Owl (Sarah Drasner) */
 :root {
+  --main-bg: #011627;
+  --bg-text: #031d33;
+  --text-color: #d6deeb;
+  --text-secondary: rgba(214, 222, 235, 0.8);
+  --accent-color: #7fdbca;
+  --accent-color-rgb: 127, 219, 202;
+  --titlebar-bg: #011627;
+  --sidebar-bg: #011627;
+  --sidebar-hover-bg: #0e293f;
+  --explorer-bg: #011627;
+  --explorer-hover-bg: #0e293f;
+  --explorer-border: rgba(255, 255, 255, 0.18);
+  --tabs-bg: #011627;
+  --tab-bg: #01111d;
+  --tab-active-bg: #0b2942;
+  --tab-border: #272b3b;
+  --bottombar-bg: #011627;
+  --bottombar-border: #262a39;
+  --button-bg: #7fdbca;
+  --button-text: #011627;
+  --bottombar-hover-bg: #1b222f;
+  --scrollbar-track-bg: #011627;
+  --scrollbar-thumb-bg: #043254;
+  --article-bg: #031d33;
+}
+
+/* GitHub Dark */
+[data-theme='github-dark'] {
   --main-bg: #24292e;
   --bg-text: rgba(56, 58, 61, 0.35);
   --text-color: #efefef;
@@ -138,14 +166,14 @@
   --article-bg: #363f50;
 }
 
-/* Night Owl */
+/* Night Owl (explicit, same as default) */
 [data-theme='night-owl'] {
   --main-bg: #011627;
   --bg-text: #031d33;
-  --text-color: #89a4bb;
-  --text-secondary: rgba(137, 164, 187, 0.8);
-  --accent-color: rgb(95, 126, 151);
-  --accent-color-rgb: 95, 126, 151;
+  --text-color: #d6deeb;
+  --text-secondary: rgba(214, 222, 235, 0.8);
+  --accent-color: #7fdbca;
+  --accent-color-rgb: 127, 219, 202;
   --titlebar-bg: #011627;
   --sidebar-bg: #011627;
   --sidebar-hover-bg: #0e293f;
@@ -155,11 +183,11 @@
   --tabs-bg: #011627;
   --tab-bg: #01111d;
   --tab-active-bg: #0b2942;
-  --tab-border: rgb(39, 43, 59);
+  --tab-border: #272b3b;
   --bottombar-bg: #011627;
   --bottombar-border: #262a39;
-  --button-bg: rgb(95, 126, 151);
-  --button-text: #fff;
+  --button-bg: #7fdbca;
+  --button-text: #011627;
   --bottombar-hover-bg: #1b222f;
   --scrollbar-track-bg: #011627;
   --scrollbar-thumb-bg: #043254;

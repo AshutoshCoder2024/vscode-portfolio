@@ -13,9 +13,6 @@ const ProjectDetailPage = ({ project }: ProjectDetailProps) => {
     <div className={styles.layout}>
       <div className={styles.header}>
         <h1 className={styles.title}>{project.title}</h1>
-        {project.category && (
-          <span className={styles.category}>{project.category}</span>
-        )}
       </div>
 
       <div className={styles.content}>

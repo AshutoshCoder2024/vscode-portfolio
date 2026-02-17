@@ -90,9 +90,8 @@ const ContactPage = () => {
     <div className={styles.layout}>
       <h1 className={styles.pageTitle}>Contact Me</h1>
       <p className={styles.pageSubtitle}>
-        Feel free to reach out to me through any of the social platforms below
-        or use the contact form. I&apos;m always open to new opportunities and
-        connections.
+        Want to collaborate, hire me, or just say hi? Use the form below and
+        I&apos;ll get back to you as soon as possible.
       </p>
       <div className={styles.container}>
         <div className={styles.leftPanel}>
@@ -100,6 +99,12 @@ const ContactPage = () => {
         </div>
         <div className={styles.rightPanel}>
           <div className={styles.contactForm}>
+            <div className={styles.formHeader}>
+              <h2 className={styles.formTitle}>Send a message</h2>
+              <p className={styles.formSubtitle}>
+                Share a few details about your project, idea, or opportunity.
+              </p>
+            </div>
             <form onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.inputWrapper}>
                 <VscAccount className={styles.inputIcon} />

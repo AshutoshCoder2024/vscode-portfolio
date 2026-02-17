@@ -1,3 +1,4 @@
+import type React from 'react';
 import Image from 'next/image';
 import { VscGithubAlt } from 'react-icons/vsc';
 
@@ -11,7 +12,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const handleCardClick = (e: React.MouseEvent) => {
-    // If clicking on the View Code link, don't trigger card click
+    // Prevent card navigation when clicking the "View Code" button
     if ((e.target as HTMLElement).closest('.viewCodeLink')) {
       return;
     }
@@ -54,9 +55,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
       <div className={styles.cardInfo}>
         <h3 className={styles.title}>{project.title}</h3>
-        {project.category && (
-          <p className={styles.category}>{project.category}</p>
-        )}
+        <p className={styles.description}>{project.description}</p>
         {project.githubLink && (
           <a
             href={project.githubLink}

@@ -167,7 +167,30 @@
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
-  overflow-x: auto;
+  /* Allow scroll with a very subtle, theme-matching scrollbar */
+  overflow: auto;
+  -ms-overflow-style: auto; /* IE and Edge */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(var(--accent-color-rgb), 0.35) transparent;
+}
+
+.contributions::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.contributions::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.contributions::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--accent-color-rgb), 0.4),
+    transparent
+  );
+  border-radius: 999px;
 }
 
 .contributions article {

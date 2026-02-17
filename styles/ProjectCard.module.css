@@ -202,13 +202,6 @@
   object-fit: contain;
 }
 
-.description {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 1rem;
-}
-
 .link {
   display: inline-flex;
   align-items: center;

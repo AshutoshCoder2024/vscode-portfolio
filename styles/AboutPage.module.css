@@ -18,6 +18,8 @@
   margin-bottom: 0.5rem;
   color: var(--accent-color);
   letter-spacing: -0.03em;
+  position: relative;
+  text-align: center;
 }
 
 .subtitle {
@@ -43,6 +45,42 @@
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--accent-color);
+  position: relative;
+  padding-left: 0.85rem;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.75rem;
+  
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--accent-color-rgb), 0.2),
+    var(--accent-color),
+    rgba(var(--accent-color-rgb), 0.2),
+    transparent
+  );
+  opacity: 0.9;
+}
+
+.sectionTitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--accent-color-rgb), 0.15),
+    rgba(var(--accent-color-rgb), 0.7)
+  );
 }
 
 .paragraph {
