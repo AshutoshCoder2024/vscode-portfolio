@@ -53,10 +53,22 @@ const ContactPage = () => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      // You can integrate with an API service like Formspree, EmailJS, or your own backend
-      // For now, we'll simulate an API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+      const response = await fetch('https://formspree.io/f/xkovbazg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       setSubmitStatus({
         type: 'success',
         message: 'Thank you for your message! I will get back to you soon.',
